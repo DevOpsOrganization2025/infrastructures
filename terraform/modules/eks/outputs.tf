@@ -1,1 +1,8 @@
+output "cluster_endpoint" {
+  value = aws_eks_cluster.cluster.endpoint
+}
+
+output "cluster_ca_data" {
+  value = aws_eks_cluster.cluster.certificate_authority[0].data
+}
 
