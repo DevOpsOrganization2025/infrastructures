@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_eks_cluster" "cluster" {
   name     = var.cluster_name
   role_arn = var.cluster_iam_role_arn 
