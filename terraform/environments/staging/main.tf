@@ -1,6 +1,6 @@
 
 module "eks" {
-  source         = "../../modules/eks"
+  source         = "git::https://github.com/DevOpsOrganization2025/infrastructures.git//terraform/modules/eks?ref=main"
   cluster_name   = "staging-cluster"
   node_group_name = "staging-node-group"
   iam_role_arn   = "arn:aws:iam::423623850991:role/eks-cluster-role"
