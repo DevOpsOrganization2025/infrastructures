@@ -1,5 +1,5 @@
 module "eks" {
-  source         = "../../modules/eks"
+  source         = "../../../modules/eks"
   cluster_name   = "test-cluster"
   node_group_name = "test-node-group"
   iam_role_arn   = "arn:aws:iam::423623850991:role/eks-cluster-role"
