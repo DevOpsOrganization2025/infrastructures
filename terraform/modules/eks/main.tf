@@ -15,13 +15,13 @@ resource "aws_eks_cluster" "cluster" {
 resource "aws_eks_node_group" "node_group" {
   cluster_name    = var.cluster_name
   node_group_name = var.node_group_name
-  node_role_arn   = var.cluster_iam_role_arn 
+  node_role_arn   = var.node_iam_role_arn 
   subnet_ids      = var.subnet_ids
 
   scaling_config {
-    desired_size = 3
-    max_size     = 3
-    min_size     = 3
+    desired_size = 2
+    max_size     = 4
+    min_size     = 1
   }
 
   update_config {
