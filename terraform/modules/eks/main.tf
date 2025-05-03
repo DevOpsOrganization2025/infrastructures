@@ -1,6 +1,6 @@
 resource "aws_eks_cluster" "cluster" {
   name     = var.cluster_name
-  role_arn = var.iam_role_arn
+  role_arn = var.cluster_iam_role_arn 
 
   vpc_config {
     subnet_ids = var.subnet_ids
@@ -12,7 +12,7 @@ resource "aws_eks_cluster" "cluster" {
 resource "aws_eks_node_group" "node_group" {
   cluster_name    = var.cluster_name
   node_group_name = var.node_group_name
-  node_role_arn   = var.iam_role_arn
+  node_role_arn   = var.cluster_iam_role_arn 
   subnet_ids      = var.subnet_ids
 
   scaling_config {
